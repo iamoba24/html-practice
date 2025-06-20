@@ -9,30 +9,30 @@
         /* General Body Styles */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif; /* You can replace 'Arial' with your preferred font */
-    background: linear-gradient(to right, #f0f0f0, #e0e0e0); /* Light gradient background */
+    font-family: 'Arial', sans-serif; 
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0); 
     display: flex;
-    flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center content horizontally */
-    min-height: 100vh; /* Ensure the content takes at least the full viewport height */
-    padding-bottom: 50px; /* Add some padding at the bottom */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding-bottom: 50px; 
+    box-sizing: border-box; 
 }
 
 /* --- Header Section --- */
 header {
     display: flex;
-    justify-content: space-between; /* Distributes items with space between them */
-    align-items: center; /* Vertically aligns items in the middle */
-    padding: 10px 40px; /* Adjust padding as needed */
-    background-color: #fff; /* White background */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow at the bottom */
-    width: 100%; /* Header spans full width */
-    max-width: 100%; /* Ensure it doesn't exceed 100% */
-    position: sticky; /* Makes header sticky */
-    top: 0; /* Sticks to the top */
-    z-index: 1000; /* Ensures it stays on top of other content */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 40px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    width: 100%; 
+    max-width: 100%; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-sizing: border-box; 
 }
 
 .logo {
@@ -55,26 +55,26 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Makes the list items horizontal */
+    display: flex; 
 }
 
 nav li {
-    margin-right: 30px; /* Space between navigation items */
+    margin-right: 30px; 
 }
 
 nav a {
     text-decoration: none;
     color: #555;
     font-weight: 500;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    transition: color 0.3s ease; 
 }
 
 nav a:hover {
-    color: #000000; /* Change color on hover */
+    color: #000000;
 }
 
 .contact-button {
-    background-color: #000000; /* Purple background */
+    background-color: #000000; 
     color: #fff;
     border: none;
     padding: 12px 25px;
@@ -86,13 +86,13 @@ nav a:hover {
 }
 
 .contact-button:hover {
-    background-color: #000000; /* Slightly darker purple on hover */
+    background-color: #000000; 
 }
 
 .menu-icon {
     color: #000000;
     cursor: pointer;
-    display: none; /* Hide by default on desktop, show on mobile with media queries */
+    display: none; 
 }
 
 /* --- Hero Section --- */
@@ -101,29 +101,29 @@ nav a:hover {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    overflow: hidden; /* Ensures the image doesn't overflow rounded corners */
-    max-width: 1200px; /* Adjust as needed */
-    width: 95%; /* Responsive width */
-    margin-top: 50px; /* Space from header */
+    overflow: hidden; 
+    max-width: 1200px; 
+    width: 95%; 
+    margin-top: 50px; 
 }
 
 .content-left {
     flex: 1;
-    padding: 60px; /* Adjust padding as needed */
+    padding: 60px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .content-left h1 {
-    font-size: 3.5em; /* Adjust heading size */
+    font-size: 3.5em; 
     margin-bottom: 20px;
     color: #333;
     line-height: 1.2;
 }
 
 .content-left h1 span {
-    color: #000000; /* Purple color for the name */
+    color: #000000; 
 }
 
 .content-left p {
@@ -131,11 +131,11 @@ nav a:hover {
     color: #666;
     line-height: 1.6;
     margin-bottom: 30px;
-    max-width: 500px; /* Limit paragraph width for readability */
+    max-width: 500px; 
 }
 
 .say-hello-button {
-    background-color: #000000; /* Purple color */
+    background-color: #000000; 
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -144,27 +144,27 @@ nav a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: fit-content; /* Button takes content width */
+    width: fit-content; 
     margin-bottom: 40px;
 }
 
 .say-hello-button:hover {
-    background-color: #000000; /* Darker purple on hover */
+    background-color: #000000; 
 }
 
 .stats-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Space between stat items */
+    gap: 20px; 
     padding-top: 30px;
-    border-top: 1px solid #eee; /* Separator line */
+    border-top: 1px solid #eee; 
 }
 
 .stat-item {
     text-align: center;
     padding: 20px 0;
-    flex: 1; /* Distribute space evenly */
-    background-color: #f9f9f9; /* Slightly different background for stats */
+    flex: 1; 
+    background-color: #f9f9f9; 
     border-radius: 10px;
     border: 1px solid #ececec;
 }
@@ -173,7 +173,7 @@ nav a:hover {
     display: block;
     font-size: 2em;
     font-weight: bold;
-    color: #000000; /* Purple color for numbers */
+    color: #000000; 
     margin-bottom: 5px;
 }
 
@@ -185,20 +185,20 @@ nav a:hover {
 
 .image-right {
     flex: 1;
-    background: linear-gradient(to bottom right, #f0f0ff, #e8f0f8); /* Gradient background behind image */
+    background: linear-gradient(to bottom right, #f0f0ff, #e8f0f8); 
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Align image to the bottom */
-    position: relative; /* For the subtle background shapes */
+    align-items: flex-end; 
+    position: relative; 
 }
 
 .image-right::before,
 .image-right::after {
     content: '';
     position: absolute;
-    background-color: rgba(138, 43, 226, 0.1); /* Light purple for background shapes */
+    background-color: rgba(138, 43, 226, 0.1); 
     border-radius: 50%;
-    filter: blur(40px); /* Soft blur effect */
+    filter: blur(40px); 
     z-index: 0;
 }
 
@@ -222,9 +222,9 @@ nav a:hover {
     max-width: 100%;
     height: auto;
     display: block;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 0 15px 15px 0; /* Match parent border-radius on the right */
-    position: relative; /* Bring image above pseudo-elements */
+    object-fit: cover; 
+    border-radius: 0 15px 15px 0; 
+    position: relative; 
     z-index: 1;
 }
 
@@ -232,10 +232,10 @@ nav a:hover {
 .designer-section {
     display: flex;
     justify-content: center;
-    padding: 80px 20px; /* Adjust padding as needed */
+    padding: 80px 20px; 
     width: 100%;
     box-sizing: border-box;
-    background: linear-gradient(to right, #f0f0f0, #e0e0e0); /* Match body background */
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0); 
 }
 
 .designer-card {
@@ -244,17 +244,17 @@ nav a:hover {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    max-width: 1000px; /* Adjust as needed */
-    width: 95%; /* Responsive width */
+    max-width: 1000px; 
+    width: 95%; 
 }
 
 .designer-image {
-    flex: 0 0 35%; /* Fixed width for image column */
+    flex: 0 0 35%; 
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
-    background: linear-gradient(to bottom right, #f0f0ff, #e8f0f8); /* Gradient behind image */
+    background: linear-gradient(to bottom right, #f0f0ff, #e8f0f8); 
 }
 
 .designer-image img {
@@ -288,12 +288,12 @@ nav a:hover {
 
 .designer-buttons {
     display: flex;
-    gap: 15px; /* Space between buttons */
+    gap: 15px; 
     margin-top: 20px;
 }
 
 .my-project-button {
-    background-color: #000000; /* Purple */
+    background-color: #000000; 
     color: #fff;
     border: none;
     padding: 12px 25px;
@@ -309,9 +309,9 @@ nav a:hover {
 }
 
 .download-cv-button {
-    background-color: #fff; /* White */
-    color: #000000; /* Purple text */
-    border: 1px solid #000000; /* Purple border */
+    background-color: #fff; 
+    color: #000000; 
+    border: 1px solid #000000; 
     padding: 12px 25px;
     border-radius: 8px;
     font-size: 1em;
@@ -329,29 +329,29 @@ nav a:hover {
 }
 
 .download-cv-button svg {
-    color: #000000; /* Icon color */
+    color: #000000; 
     transition: color 0.3s ease;
 }
 
 .download-cv-button:hover svg {
-    color: #fff; /* Icon color on hover */
+    color: #fff; 
 }
 
 /* --- Work Process Section --- */
 .work-process-section {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Space between left content and grid */
+    gap: 50px; 
     padding: 80px 20px;
-    width: 95%; /* Responsive width */
-    max-width: 1200px; /* Match hero section width */
-    margin: 0 auto; /* Center the section */
+    width: 95%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
     box-sizing: border-box;
 }
 
 .work-process-left {
     flex: 1;
-    max-width: 450px; /* Limit width of text content */
+    max-width: 450px; 
 }
 
 .work-process-left h2 {
@@ -367,7 +367,7 @@ nav a:hover {
 }
 
 .work-process-right {
-    flex: 1.5; /* Give more space to the grid */
+    flex: 1.5; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -375,8 +375,8 @@ nav a:hover {
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 25px; /* Space between grid items */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px; 
     width: 100%;
 }
 
@@ -387,11 +387,11 @@ nav a:hover {
     padding: 30px;
     text-align: left;
     position: relative;
-    overflow: hidden; /* For any potential decorative elements */
+    overflow: hidden; 
 }
 
 .process-icon {
-    background-color: rgba(138, 43, 226, 0.1); /* Light purple background for icon */
+    background-color: rgba(138, 43, 226, 0.1); 
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -402,7 +402,7 @@ nav a:hover {
 }
 
 .process-icon svg {
-    color: #000000; /* Purple icon color */
+    color: #000000; 
     width: 24px;
     height: 24px;
 }
@@ -413,15 +413,15 @@ nav a:hover {
     right: 20px;
     font-size: 2em;
     font-weight: bold;
-    color: #eee; /* Light grey for the number */
-    z-index: 0; /* Behind other content */
+    color: #eee; 
+    z-index: 0; 
 }
 
 .process-item h3 {
     font-size: 1.3em;
     color: #333;
     margin-bottom: 10px;
-    position: relative; /* Bring text above number */
+    position: relative; 
     z-index: 1;
 }
 
@@ -440,22 +440,22 @@ nav a:hover {
         padding: 15px 20px;
     }
     nav, .contact-button {
-        display: none; /* Hide navigation and button on smaller screens */
+        display: none; 
     }
     .menu-icon {
-        display: block; /* Show menu icon */
+        display: block; 
     }
 
     /* Hero Section */
     .hero-section {
-        flex-direction: column; /* Stack content vertically on smaller screens */
+        flex-direction: column; 
         align-items: center;
         margin-top: 30px;
     }
 
     .content-left {
         padding: 40px;
-        text-align: center; /* Center text for smaller screens */
+        text-align: center; 
     }
 
     .content-left h1 {
@@ -463,28 +463,28 @@ nav a:hover {
     }
 
     .content-left p {
-        max-width: 100%; /* Allow paragraph to take full width */
+        max-width: 100%; 
     }
 
     .say-hello-button {
-        margin: 0 auto 30px auto; /* Center button */
+        margin: 0 auto 30px auto; 
     }
 
     .stats-container {
-        flex-wrap: wrap; /* Allow stats to wrap if needed */
+        flex-wrap: wrap; 
         justify-content: center;
     }
 
     .stat-item {
-        flex: unset; /* Remove flex sizing */
-        width: 45%; /* Two items per row */
+        flex: unset; 
+        width: 45%; 
         margin-bottom: 15px;
     }
 
     .image-right {
         width: 100%;
-        height: 400px; /* Give a fixed height for the image section */
-        border-radius: 0 0 15px 15px; /* Adjust border radius */
+        height: 400px; 
+        border-radius: 0 0 15px 15px; 
     }
 
     .image-right img {
@@ -493,19 +493,19 @@ nav a:hover {
 
     /* Designer Section */
     .designer-card {
-        flex-direction: column; /* Stack image and info */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
 
     .designer-image {
         flex: unset;
-        width: 100%; /* Full width for image section */
+        width: 100%; 
         padding: 40px 20px 20px 20px;
     }
 
     .designer-image img {
-        max-width: 60%; /* Limit image size on smaller screens */
+        max-width: 60%; 
         border-radius: 15px;
     }
 
@@ -514,18 +514,18 @@ nav a:hover {
     }
 
     .designer-buttons {
-        flex-direction: column; /* Stack buttons */
+        flex-direction: column; 
         align-items: center;
     }
 
     .my-project-button, .download-cv-button {
-        width: 80%; /* Make buttons wider */
+        width: 80%; 
         max-width: 300px;
     }
 
     /* Work Process Section */
     .work-process-section {
-        flex-direction: column; /* Stack work process sections */
+        flex-direction: column; 
         gap: 30px;
         text-align: center;
     }
@@ -536,7 +536,7 @@ nav a:hover {
     }
 
     .process-grid {
-        grid-template-columns: 1fr; /* Single column for process items */
+        grid-template-columns: 1fr; 
         padding: 0 20px;
     }
 }
@@ -570,11 +570,11 @@ nav a:hover {
     }
 
     .stats-container {
-        flex-direction: column; /* Stack stats vertically on very small screens */
+        flex-direction: column; 
     }
 
     .stat-item {
-        width: 90%; /* One item per row */
+        width: 90%; 
         margin-bottom: 10px;
     }
 
