@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obadele Ayomide David - Full Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* You can replace 'Arial' with your preferred font */
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0); /* Light gradient background */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+    padding-bottom: 50px; /* Add some padding at the bottom */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* --- Header Section --- */
+header {
+    display: flex;
+    justify-content: space-between; /* Distributes items with space between them */
+    align-items: center; /* Vertically aligns items in the middle */
+    padding: 10px 40px; /* Adjust padding as needed */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow at the bottom */
+    width: 100%; /* Header spans full width */
+    max-width: 100%; /* Ensure it doesn't exceed 100% */
+    position: sticky; /* Makes header sticky */
+    top: 0; /* Sticks to the top */
+    z-index: 1000; /* Ensures it stays on top of other content */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo-circle {
+    display: flex;
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes the list items horizontal */
+}
+
+nav li {
+    margin-right: 30px; /* Space between navigation items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #000000; /* Change color on hover */
+}
+
+.contact-button {
+    background-color: #000000; /* Purple background */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #000000; /* Slightly darker purple on hover */
+}
+
+.menu-icon {
+    color: #000000;
+    cursor: pointer;
+    display: none; /* Hide by default on desktop, show on mobile with media queries */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Ensures the image doesn't overflow rounded corners */
+    max-width: 1200px; /* Adjust as needed */
+    width: 95%; /* Responsive width */
+    margin-top: 50px; /* Space from header */
+}
+
+.content-left {
+    flex: 1;
+    padding: 60px; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-left h1 {
+    font-size: 3.5em; /* Adjust heading size */
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.content-left h1 span {
+    color: #000000; /* Purple color for the name */
+}
+
+.content-left p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px; /* Limit paragraph width for readability */
+}
+
+.say-hello-button {
+    background-color: #000000; /* Purple color */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content; /* Button takes content width */
+    margin-bottom: 40px;
+}
+
+.say-hello-button:hover {
+    background-color: #000000; /* Darker purple on hover */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between stat items */
+    padding-top: 30px;
+    border-top: 1px solid #eee; /* Separator line */
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px 0;
+    flex: 1; /* Distribute space evenly */
+    background-color: #f9f9f9; /* Slightly different background for stats */
+    border-radius: 10px;
+    border: 1px solid #ececec;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000; /* Purple color for numbers */
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.image-right {
+    flex: 1;
+    background: linear-gradient(to bottom right, #f0f0ff, #e8f0f8); /* Gradient background behind image */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align image to the bottom */
+    position: relative; /* For the subtle background shapes */
+}
+
+.image-right::before,
+.image-right::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(138, 43, 226, 0.1); /* Light purple for background shapes */
+    border-radius: 50%;
+    filter: blur(40px); /* Soft blur effect */
+    z-index: 0;
+}
+
+.image-right::before {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+    transform: rotate(45deg);
+}
+
+.image-right::after {
+    width: 150px;
+    height: 150px;
+    bottom: 5%;
+    right: 5%;
+    transform: rotate(-30deg);
+}
+
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 0 15px 15px 0; /* Match parent border-radius on the right */
+    position: relative; /* Bring image above pseudo-elements */
+    z-index: 1;
+}
+
+/* --- Designer Section --- */
+.designer-section {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px; /* Adjust padding as needed */
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0); /* Match body background */
+}
+
+.designer-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    max-width: 1000px; /* Adjust as needed */
+    width: 95%; /* Responsive width */
+}
+
+.designer-image {
+    flex: 0 0 35%; /* Fixed width for image column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(to bottom right, #f0f0ff, #e8f0f8); /* Gradient behind image */
+}
+
+.designer-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.designer-info {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.designer-info h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.designer-info p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.designer-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.my-project-button {
+    background-color: #000000; /* Purple */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.my-project-button:hover {
+    background-color: #000000;
+}
+
+.download-cv-button {
+    background-color: #fff; /* White */
+    color: #000000; /* Purple text */
+    border: 1px solid #000000; /* Purple border */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.download-cv-button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.download-cv-button svg {
+    color: #000000; /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.download-cv-button:hover svg {
+    color: #fff; /* Icon color on hover */
+}
+
+/* --- Work Process Section --- */
+.work-process-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between left content and grid */
+    padding: 80px 20px;
+    width: 95%; /* Responsive width */
+    max-width: 1200px; /* Match hero section width */
+    margin: 0 auto; /* Center the section */
+    box-sizing: border-box;
+}
+
+.work-process-left {
+    flex: 1;
+    max-width: 450px; /* Limit width of text content */
+}
+
+.work-process-left h2 {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.work-process-left p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.7;
+}
+
+.work-process-right {
+    flex: 1.5; /* Give more space to the grid */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 25px; /* Space between grid items */
+    width: 100%;
+}
+
+.process-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: left;
+    position: relative;
+    overflow: hidden; /* For any potential decorative elements */
+}
+
+.process-icon {
+    background-color: rgba(138, 43, 226, 0.1); /* Light purple background for icon */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.process-icon svg {
+    color: #000000; /* Purple icon color */
+    width: 24px;
+    height: 24px;
+}
+
+.process-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #eee; /* Light grey for the number */
+    z-index: 0; /* Behind other content */
+}
+
+.process-item h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative; /* Bring text above number */
+    z-index: 1;
+}
+
+.process-item p {
+    font-size: 0.9em;
+    color: #777;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    /* Header */
+    header {
+        padding: 15px 20px;
+    }
+    nav, .contact-button {
+        display: none; /* Hide navigation and button on smaller screens */
+    }
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    /* Hero Section */
+    .hero-section {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .content-left {
+        padding: 40px;
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .content-left h1 {
+        font-size: 2.8em;
+    }
+
+    .content-left p {
+        max-width: 100%; /* Allow paragraph to take full width */
+    }
+
+    .say-hello-button {
+        margin: 0 auto 30px auto; /* Center button */
+    }
+
+    .stats-container {
+        flex-wrap: wrap; /* Allow stats to wrap if needed */
+        justify-content: center;
+    }
+
+    .stat-item {
+        flex: unset; /* Remove flex sizing */
+        width: 45%; /* Two items per row */
+        margin-bottom: 15px;
+    }
+
+    .image-right {
+        width: 100%;
+        height: 400px; /* Give a fixed height for the image section */
+        border-radius: 0 0 15px 15px; /* Adjust border radius */
+    }
+
+    .image-right img {
+        border-radius: 0;
+    }
+
+    /* Designer Section */
+    .designer-card {
+        flex-direction: column; /* Stack image and info */
+        align-items: center;
+        text-align: center;
+    }
+
+    .designer-image {
+        flex: unset;
+        width: 100%; /* Full width for image section */
+        padding: 40px 20px 20px 20px;
+    }
+
+    .designer-image img {
+        max-width: 60%; /* Limit image size on smaller screens */
+        border-radius: 15px;
+    }
+
+    .designer-info {
+        padding: 30px 20px;
+    }
+
+    .designer-buttons {
+        flex-direction: column; /* Stack buttons */
+        align-items: center;
+    }
+
+    .my-project-button, .download-cv-button {
+        width: 80%; /* Make buttons wider */
+        max-width: 300px;
+    }
+
+    /* Work Process Section */
+    .work-process-section {
+        flex-direction: column; /* Stack work process sections */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .work-process-left {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr; /* Single column for process items */
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Header */
+    header {
+        padding: 10px 15px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .logo-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    /* Hero Section */
+    .content-left h1 {
+        font-size: 2.2em;
+    }
+
+    .content-left p {
+        font-size: 1em;
+    }
+
+    .say-hello-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .stats-container {
+        flex-direction: column; /* Stack stats vertically on very small screens */
+    }
+
+    .stat-item {
+        width: 90%; /* One item per row */
+        margin-bottom: 10px;
+    }
+
+    /* Designer Section */
+    .designer-info h2 {
+        font-size: 1.8em;
+    }
+
+    .designer-info p {
+        font-size: 0.9em;
+    }
+
+    .my-project-button, .download-cv-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    /* Work Process Section */
+    .work-process-left h2 {
+        font-size: 2.2em;
+    }
+
+    .process-item {
+        padding: 25px;
+    }
+
+    .process-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .process-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="C:\Users\OBA_D\Desktop\html-pactice\PORA\mg logo.png" motion grafix="">
+            </div>
+            <span>Motion Grafix</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Process</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </nav>
+        <button class="contact-button">Contact</button>
+        <div class="menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="content-left">
+            <h1>Hello, I'm <br><span>Obadele Ayomide David</span></h1>
+            <p>I am a Graphics Designer, Photographer, Videographer based in Kaduna. I am the owner of Motion Grafix (a Graphics design brand), Oba_D Photography (a Photography brand) and also Motion Vista(a videography and editting brand).</p>
+            <button class="say-hello-button">Say Hello!</button>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">15 Y.</span>
+                    <span class="stat-label">Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Project Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">Happy Client</span>
+                </div>
+            </div>
+        </div>
+        <div class="image-right">
+            <img src="C:\Users\OBA_D\Desktop\html-pactice\PORA\67a7d0f1-9fd3-4571-991f-685a697a4b2e.jpg" alt="Obadele Ayomide David">
+        </div>
+    </div>
+
+    <div class="designer-section">
+        <div class="designer-card">
+            <div class="designer-image">
+                <img src="C:\Users\OBA_D\Desktop\html-pactice\PORA\67a7d0f1-9fd3-4571-991f-685a697a4b2e.jpg" alt="Obadele Ayomide David">
+            </div>
+            <div class="designer-info">
+                <h2>I am Professional <br>Graphics Designer, Photographer and Videographer.</h2>
+                <p>I design, shoot and edit for customers specializing in modelling, Fashion, Advertisment, Businesses etc. My passion is to help businesses brand well.</p>
+                <p>I design for customers who want to give their business a good face.</p>
+                <div class="designer-buttons">
+                    <button class="my-project-button">My Project</button>
+                    <button class="download-cv-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-process-section">
+        <div class="work-process-left">
+            <h2>Work Process</h2>
+            <p></p>
+        </div>
+        <div class="work-process-right">
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                    <span class="process-number">1.</span>
+                    <h3>Research</h3>
+                    <p></p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
+                    <span class="process-number">2.</span>
+                    <h3>Analyze</h3>
+                    <p></p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    </div>
+                    <span class="process-number">3.</span>
+                    <h3>Design</h3>
+                    <p></p>
+                </div>
+                <div class="process-item">
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </div>
+                    <span class="process-number">4.</span>
+                    <h3>Launch</h3>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
